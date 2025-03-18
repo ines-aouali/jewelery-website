@@ -187,7 +187,7 @@ height: 350px;
 .images p:hover {
   font-size: larger;
 }
-.about-us {
+#about-us {
   background-color: #e3d5ca;
   font-family: "Roboto Mono", sans-serif;
   padding-top: 35px;
@@ -202,7 +202,7 @@ height: 350px;
   margin-top: 25px;
   padding-bottom: 25px;
 }
-.about-us p {
+#about-us p {
   text-align: left;
   width: 50%; /* Adjust as needed */
   margin-left: 0;
