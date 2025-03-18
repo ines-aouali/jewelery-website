@@ -3,25 +3,30 @@
   padding: 0;
 }
 body {
-  background-color: #e9dac4;
+  background-color: #d2bea5;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 .icon {
   color: white;
   font-size: 18px;
   padding-right: 25px;
   display: flex;
+  align-items: center;
   gap: 30px;
 }
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #b58d7e;
-  padding: 15px 20px;
-  font-family: "Montserrat", sans-serif;
+  background-color: #9a7042;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: "Roboto Mono", sans-serif;
   position: sticky;
   top: 0;
   overflow: hidden;
+  z-index: 1000; /* Ensure it's on top */
   /* border-radius: 7px; */
 }
 .gauche {
@@ -33,15 +38,30 @@ body {
   text-decoration: none;
   font-size: 16px;
   padding: 8px 12px;
+  padding-left: 20px;
 }
-.gauche a:hover {
+.gauche ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.gauche ul li {
+  text-decoration: none;
+  margin: 0 o.75em 0 0.75em;
+}
+.gauche ul:hover a:hover {
   color: #c2a878;
-  text-decoration: solid;
+  box-shadow: 0 2px 0 0 currentColor;
 }
 .droite {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
+  padding-right: 20px;
+}
+.droite .fa-solid:hover {
+  color: #c2a878;
+  box-shadow: 0 2px 0 0 currentColor;
 }
 .head {
   position: relative;
@@ -55,63 +75,153 @@ body {
 
 .head img {
   width: 100%;
-  height: 550px;
-  object-fit: cover;
+  height: auto;
   display: block;
-}
-
-.text,
-.text2 {
-  position: absolute;
-  left: 50%;
-  color: white;
-  transform: translate(-50%, -50%);
-  font-size: 45px;
-  font-weight: bold;
-  font-family: "Cinzel", sans-serif;
-  padding: 5px 10px;
-  text-align: center;
+  max-height: 500px;
+  object-fit: cover;
 }
 
 .text {
-  top: 40%;
+  position: absolute;
+  top: 50%; /* Centers vertically */
+  left: 50%; /* Centers horizontally */
+  transform: translate(-50%, -50%); /* Ensures perfect centering */
+  color: white;
+  font-size: 120px;
+  font-family: "Fleur de Leah", sans-serif;
+  font-weight: 500;
+  padding: 5px 10px;
+  text-align: center;
+  width: 100%; /* Ensures text does not overflow */
 }
-.text2 {
-  top: 55%;
-}
+
 .best-sell {
   text-align: center;
-  color: #b58d7e;
-  font-size: 30px;
-  font-family: "Montserrat", sans-serif;
+  color: #743c1a;
+  font-size: 40px;
+  font-family: "Roboto Mono", sans-serif;
   margin-top: 25px;
 }
 .images {
   margin-top: 35px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   gap: 5px;
+  margin-top: 50px;
   margin-bottom: 90px;
 }
 .images img {
-  width: 300px; /* Adjust size as needed */
-  height: auto; /* Maintain aspect ratio */
+  width: 150px;
+  height: auto;
   display: block; /* Avoid extra space below images */
   margin-bottom: 10px;
 }
-.images img:hover {
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+/* .article img {
+  width: 300px; 
+height: 350px; 
+  object-fit: cover;
+} */
+/* .article {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+} */
+.article-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
 }
+
+.article-container img {
+  width: 100%;
+  display: block;
+  transition: filter 0.3s ease-in-out;
+}
+
+/* Overlay that appears on hover */
+.article-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 92%;
+  background: rgba(245, 226, 182, 0.4); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Button centered inside the overlay */
+.article-container .overlay button {
+  background-color: white;
+  color: #9a7042;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 2;
+  border-radius: 8px;
+}
+
+/* Hover effect */
+.article-container:hover img {
+  filter: blur(5px); /* Blur effect */
+}
+
+.article-container:hover .overlay {
+  opacity: 1; /* Show overlay */
+}
+
+.article-container .overlay button:hover {
+  background-color: #d2bea5; /* Change button color on hover */
+}
+
 .images p {
-  font-family: "Montserrat", sans-serif;
+  color: #706152;
+  font-family: "Roboto Mono", sans-serif;
   font-style: italic;
 }
 .images p:hover {
   font-size: larger;
 }
+.about-us {
+  background-color: #e3d5ca;
+  font-family: "Roboto Mono", sans-serif;
+  padding-top: 35px;
+  padding-bottom: 90px;
+  margin-bottom: 95px;
+}
+.about {
+  text-align: center;
+  color: #743c1a;
+  font-size: 40px;
+  font-family: "Roboto Mono", sans-serif;
+  margin-top: 25px;
+  padding-bottom: 25px;
+}
+.about-us p {
+  text-align: left;
+  width: 50%; /* Adjust as needed */
+  margin-left: 0;
+  margin-right: auto;
+  padding-left: 17px;
+}
+.image img {
+  width: 400px; /* Adjust size */
+  height: auto;
+  position: absolute;
+  right: 10%; /* Adjust horizontal position */
+  top: 203%;
+  transform: translateY(50%);
+  border-radius: 8px;
+}
 footer {
-  background: #b58d7e;
+  background: #706152;
   padding-top: 50px;
+  font-family: "Roboto Mono", sans-serif;
 }
 .container {
   width: 1140px;
@@ -191,7 +301,7 @@ a:hover {
   color: beige;
 }
 .bottom-bar {
-  background: #b58d7e;
+  background: #706152;
   text-align: center;
   padding: 10px 0;
   margin-top: 50px;

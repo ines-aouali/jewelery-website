@@ -4,68 +4,127 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Necklaces</title>
-    <link rel="icon" type="image/x-icon" href="diamond.png" />
+    <title>Golden Bloom</title>
+    <link rel="icon" type="image/x-icon" href="images/diamond.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Cinzel:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Fleur+De+Leah&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=MonteCarlo&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
   </head>
   <body>
     <div class="nav">
       <div class="gauche">
-        <a href="index.html">Home</a>
-        <a href="earings.html">Earings</a>
-        <a href="rings.html">Rings</a>
-        <a href="necklace.html">Necklaces</a>
-        <a href="bracelet.html">Bracelets</a>
+        <ul>
+          <li><a href="earings.html">Earings</a></li>
+          <li><a href="rings.html">Rings</a></li>
+          <li><a href="necklace.html">Necklaces</a></li>
+          <li><a href="bracelet.html">Bracelets</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
       </div>
       <div class="droite">
-        <a href="#" class="acc">My Account</a>
+        <div class="icon">
+          <a href="index.html">
+            <i class="fa-solid fa-house"> </i>
+          </a>
+          <i class="fa-solid fa-cart-shopping"></i>
+          <i class="fa-solid fa-user"></i>
+        </div>
       </div>
     </div>
     <div class="head">
-      <h1 class="text">Golden Bloom</h1>
-      <h1 class="text2">Where Elegance Meets Brilliance</h1>
-      <img
-        src="images/Beige and White Minimalist Jewellry Catalogue Presentation.png"
-      />
+      <img src="images/necklace.jpeg" />
+      <h1
+        class="text"
+        style="
+          font-family: 'MonteCarlo', sans-serif;
+          text-align: center;
+          color: #706152;
+        "
+      >
+        Necklaces
+      </h1>
     </div>
-    <h2 class="best-sell">Necklaces' Articles</h2>
-    <div class="images">
-      <div class="article1">
-        <img src="images/necklace1.png" style="height: 358px" />
-        <p>price1</p>
-      </div>
-      <div class="article2">
-        <img src="images/necklace2.png" />
-        <p>price2</p>
-      </div>
-      <div class="article3">
-        <img src="images/necklace3.png" />
-        <p>price3</p>
-      </div>
-      <div class="article4">
-        <img src="images/necklace4.png" />
-        <p>price4</p>
+    <div class="articles">
+      <!-- <h2 class="best-sell">Best Sellers</h2> -->
+      <div class="images">
+        <div class="article-container">
+          <img src="images/necklace1.png" />
+          <div class="overlay">
+            <button>
+              <i class="fa-solid fa-cart-shopping"></i> Add to cart
+            </button>
+          </div>
+          <p>$$$</p>
+        </div>
+        <div class="article-container">
+          <img src="images/necklace2.png" />
+          <div class="overlay">
+            <button>
+              <i class="fa-solid fa-cart-shopping"></i> Add to cart
+            </button>
+          </div>
+          <p>$$$</p>
+        </div>
+        <div class="article-container">
+          <img src="images/necklace3.png" />
+          <div class="overlay">
+            <button>
+              <i class="fa-solid fa-cart-shopping"></i> Add to cart
+            </button>
+          </div>
+          <p>$$$</p>
+        </div>
+        <div class="article-container">
+          <img src="images/necklace4.png" />
+          <div class="overlay">
+            <button>
+              <i class="fa-solid fa-cart-shopping"></i> Add to cart
+            </button>
+          </div>
+          <p>$$$</p>
+        </div>
       </div>
     </div>
 
-    <div class="footer">
-      <div class="p1">
-        <h4>Quick Links</h4>
-        <a href="#">Home</a>
-        <a href="#">Support</a>
-        <a href="#">Contact</a>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <h3>Contact Us</h3>
+          <p>Email:GoldenBloom@gmail.com</p>
+          <p>Phone:+213 56556 565556</p>
+          <p>Address:street</p>
+        </div>
+        <div class="footer-content">
+          <h3>Follow Us</h3>
+          <ul class="social-icons">
+            <li>
+              <a href=""><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-linkedin"></i></a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="p2">
-        <h4>Announcements / Promoted Content</h4>
-        <p class="exclu">✨ Exclusive Collection Launch ! ✨</p>
-        <p id="be">
-          Be among the first to own our newest masterpieces. Crafted with the
-          finest materials, each piece tells a story of luxury and elegance.
-        </p>
+      <div class="bottom-bar">
+        <p>&copy; 2025 Golden Bloom . All rights reserved</p>
       </div>
-    </div>
+    </footer>
   </body>
 </html>
