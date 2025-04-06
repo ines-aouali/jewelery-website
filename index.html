@@ -36,7 +36,10 @@
           <a href="index.html">
             <i class="fa-solid fa-house"> </i>
           </a>
-          <i class="fa-solid fa-cart-shopping"></i>
+          <div class="icon-cart" id="cart-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count">0</span>
+          </div>
           <button id="form-open">Login</button>
         </div>
       </div>
@@ -49,44 +52,56 @@
     <div class="articles">
       <h2 class="best-sell">Best Sellers</h2>
       <div class="images">
-        <div class="article-container">
+        <div class="article-container" data-name="Bracelet" data-price="200">
           <img src="images/bracelet3.png" />
           <div class="overlay">
-            <button>
+            <button class="addCart">
               <i class="fa-solid fa-cart-shopping"></i> Add to cart
             </button>
           </div>
-          <p>$$$</p>
+          <p>200$</p>
         </div>
-        <div class="article-container">
+        <div class="article-container" data-name="Earring" data-price="150">
           <img src="images/earing2.png" />
           <div class="overlay">
-            <button>
+            <button class="addCart">
               <i class="fa-solid fa-cart-shopping"></i> Add to cart
             </button>
           </div>
-          <p>$$$</p>
+          <p>150$</p>
         </div>
-        <div class="article-container">
+        <div class="article-container" data-name="Necklace" data-price="300">
           <img src="images/necklace3.png" />
           <div class="overlay">
-            <button>
+            <button class="addCart">
               <i class="fa-solid fa-cart-shopping"></i> Add to cart
             </button>
           </div>
-          <p>$$$</p>
+          <p>300$</p>
         </div>
-        <div class="article-container">
+        <div class="article-container" data-name="Ring" data-price="250">
           <img src="images/ring2.png" />
           <div class="overlay">
-            <button>
+            <button class="addCart">
               <i class="fa-solid fa-cart-shopping"></i> Add to cart
             </button>
           </div>
-          <p>$$$</p>
+          <p>250$</p>
         </div>
       </div>
     </div>
+
+    <div class="cartTab" id="cart-modal">
+      <h1>Shopping Cart</h1>
+      <div class="listCart" id="cart-items">
+        <!-- Cart items will be dynamically added here -->
+      </div>
+      <div class="btn">
+        <button class="close" id="close-cart">Close</button>
+        <button class="checkOut">Check Out</button>
+      </div>
+    </div>
+
     <div id="about-us">
       <h2 class="about">About Us</h2>
       <p>
@@ -159,7 +174,6 @@
                 required
               />
               <i class="fa-solid fa-lock password"></i>
-              <!-- <i class="fa-solid fa-eye-slash pw-hide"></i> -->
             </div>
 
             <div class="option_field">
@@ -191,7 +205,6 @@
                 required
               />
               <i class="fa-solid fa-lock password"></i>
-              <!-- <i class="fa-solid fa-eye-slash pw-hide"></i> -->
             </div>
             <div class="input_box">
               <input
@@ -200,7 +213,6 @@
                 required
               />
               <i class="fa-solid fa-lock password"></i>
-              <!-- <i class="fa-solid fa-eye-slash pw-hide"></i> -->
             </div>
 
             <button class="button">Sign Up Now</button>
@@ -212,6 +224,7 @@
       </div>
     </section>
 
-    <script src="script.js"></script>
+    <script src="login.js"></script>
+    <script src="cart.js"></script>
   </body>
 </html>
