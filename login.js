@@ -4,17 +4,22 @@ const formOpenBtn = document.querySelector("#form-open"),
   formCloseBtn = document.querySelector(".form_close"),
   signupBtn = document.querySelector("#signup"),
   loginBtn = document.querySelector("#login"),
-  pwShowHide = document.querySelectorAll(".pw_hide");
+  pwShowHide = document.querySelectorAll(".pw_hide"),
+  mainContent = document.querySelector(".main-content");
 
 // Open login form when clicking the login button
 console.log("JavaScript is running!");
 formOpenBtn.addEventListener("click", () => {
   console.log("Login button clicked!");
   home.classList.add("show");
+  mainContent.classList.add("blur");
+  formContainer.style.display = "block";
 });
 formCloseBtn.addEventListener("click", () => {
   console.log("Close button clicked!");
   home.classList.remove("show");
+  mainContent.classList.remove("blur");
+  formContainer.style.display = "none"; // Hide the form container
 });
 
 // Toggle password visibility
